@@ -2,6 +2,8 @@
 
 A Python [Flask REST API](https://blog.miguelgrinberg.com/post/designing-a-restful-api-with-python-and-flask) to fetch book information in the form of [JSON](https://www.json.org/json-en.html)
 
+Currently being built via CircleCI
+
 ## Instructions
 
 ### Running Locally
@@ -26,7 +28,23 @@ followed by
 pipenv run python api.py
 ```
 
-NOTE: **pipenv** can be tempremental and varies from machine to machine if the above steps do not work skip to **Running in Docker** below
+### Running Unit Tests
+
+The tests can be ran in the same manner as running the application.
+
+Ensure you are in the root of the project and run:
+
+```
+pip install pipenv
+```
+
+Once **pipenv** is installed you can run the application locally by running:
+
+```
+pipenv run python -m unittest
+```
+
+
 
 ### Running in Docker
 
@@ -45,4 +63,3 @@ docker run --rm -it -p 5000:5000 bookstore-api:1.0
 ```
 
 Then you should be able to open up your browser and head to [http://localhost:5000/books](http://localhost:5000/books) to see the JSON response
-
